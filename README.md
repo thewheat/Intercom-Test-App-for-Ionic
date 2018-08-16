@@ -10,6 +10,10 @@
 ionic cordova platform add android
 ionic cordova platform add ios
 ```
+- Add dependencies
+```
+cordova plugin add cordova-plugin-intercom
+```
 - Configure `config.xml` ([install docs](https://developers.intercom.com/installing-intercom/docs/cordova-phonegap-installation#section-step-2-initialize-intercom))
 - Run app
 ```
