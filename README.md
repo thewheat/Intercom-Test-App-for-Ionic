@@ -27,3 +27,5 @@ ionic cordova emulate android
 
 ## Other details
 - Base app / commit created via `ionic start MyIonicProject tutorial` detailed in the [Ionic Tutorial](https://ionicframework.com/docs/intro/tutorial/)
+- If you want to use [intercom-cordova](https://github.com/intercom/intercom-cordova) check out the 
+[master](https://github.com/thewheat/Intercom-Test-App-for-Ionic/tree/master) branch
