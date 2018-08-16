@@ -8,6 +8,8 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+declare var cordova:any;
+
 
 @Component({
   templateUrl: 'app.html'
@@ -40,6 +42,9 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      cordova.plugins.intercom.registerIdentifiedUser({userId: "12345"});
+      cordova.plugins.intercom.setLauncherVisibility('VISIBLE');
+
     });
   }
 
