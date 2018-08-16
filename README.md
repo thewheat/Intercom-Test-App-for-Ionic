@@ -1,6 +1,6 @@
 # Sample Ionic App that integrates with Intercom
 
-- Integrates with [Intercom](https://intercom.com) via [intercom-cordova](https://github.com/intercom/intercom-cordova)
+- Integrates with [Intercom](https://intercom.com) via [@ionic-native/intercom](https://ionicframework.com/docs/native/intercom/)
 
 ## How to use
 
@@ -9,6 +9,11 @@
 ```
 ionic cordova platform add android
 ionic cordova platform add ios
+```
+- Add dependencies
+```
+ionic cordova plugin add cordova-plugin-intercom
+npm install --save @ionic-native/intercom
 ```
 - Configure `config.xml` ([install docs](https://developers.intercom.com/installing-intercom/docs/cordova-phonegap-installation#section-step-2-initialize-intercom))
 - Run app

@@ -8,7 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-declare var cordova:any;
+import { Intercom } from '@ionic-native/intercom';
 
 
 @Component({
@@ -25,7 +25,8 @@ export class MyApp {
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private intercom: Intercom
   ) {
     this.initializeApp();
 
@@ -42,8 +43,10 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      cordova.plugins.intercom.registerIdentifiedUser({userId: "12345"});
-      cordova.plugins.intercom.setLauncherVisibility('VISIBLE');
+
+      //this.intercom.registerUnidentifiedUser({});
+      this.intercom.registerIdentifiedUser({userId: "123456"});
+      this.intercom.setLauncherVisibility('VISIBLE');
 
     });
   }
